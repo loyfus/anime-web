@@ -1,6 +1,6 @@
 {
-  "short_name": "Loyfus Animes",
-  "name": "Teste de aplicacao FullStack",
+  "short_name": "anime-web",
+  "name": "Catalogo de animes em alta",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

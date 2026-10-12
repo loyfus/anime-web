@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { fetchTopAnimes } from '../api/api';
 import { Link } from 'react-router-dom';
 import './AnimeList.css';
@@ -13,7 +13,10 @@ const AnimeList = () => {
   const [page, setPage] = useState(1);
   const [hasNextPage, setHasNextPage] = useState(true);
 
-  const loadAnimes = async () => {
+  // useCallback: o efeito abaixo depende desta funcao. Sem memoizar, a
+  // dependencia mudaria a cada render e o efeito recarregaria a pagina
+  // inteira em loop.
+  const loadAnimes = useCallback(async () => {
     setLoading(true);
     try {
       const data = await fetchTopAnimes(page);
@@ -24,7 +27,7 @@ const AnimeList = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [page]);
 
   useEffect(() => {
     toast(
@@ -50,7 +53,7 @@ const AnimeList = () => {
 
   useEffect(() => {
     loadAnimes();
-  }, [page]);
+  }, [loadAnimes]);
 
   const loadMore = () => {
     if (hasNextPage) setPage((prev) => prev + 1);

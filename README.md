@@ -1,6 +1,6 @@
-# LoyfusAnime · front
+# anime-web
 
-Interface em React para a [API de animes](https://github.com/loyfus/animeBackEnd):
+Interface em React para a [API de animes](https://github.com/loyfus/anime-api):
 lista dos mais populares, busca e detalhe com link de streaming.
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)
@@ -8,9 +8,12 @@ lista dos mais populares, busca e detalhe com link de streaming.
 
 Demo: [loyfus-anime-frontend.vercel.app](https://loyfus-anime-frontend.vercel.app)
 
+> **Contexto.** Projeto de estudo — não está em produção. Consome a
+> [anime-api](https://github.com/loyfus/anime-api); a base URL fica em `src/api/api.js`.
+
 ## O problema
 
-A [API de animes](https://github.com/loyfus/animeBackEnd) devolve JSON puro, mas
+A [API de animes](https://github.com/loyfus/anime-api) devolve JSON puro, mas
 quem chega pelo link do site ainda precisa de uma interface para navegar. É
 aqui que a lista vira navegável.
 
