@@ -8,6 +8,12 @@ lista dos mais populares, busca e detalhe com link de streaming.
 
 Demo: [loyfus-anime-frontend.vercel.app](https://loyfus-anime-frontend.vercel.app)
 
+## O problema
+
+A [API de animes](https://github.com/loyfus/animeBackEnd) devolve JSON puro, mas
+quem chega pelo link do site ainda precisa de uma interface para navegar. É
+aqui que a lista vira navegável.
+
 ## O que faz
 
 - Lista paginada dos animes em alta
